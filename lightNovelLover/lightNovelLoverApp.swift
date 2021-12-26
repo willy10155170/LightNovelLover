@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct lightNovelLoverApp: App {
+    @StateObject var networkStatus = NetworkStatus()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(networkStatus)
         }
     }
 }

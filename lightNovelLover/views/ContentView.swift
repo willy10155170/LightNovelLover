@@ -18,13 +18,13 @@ struct ContentView: View {
                 .tabItem{
                     Label("熱門新書", systemImage: "house.circle")
                 }
-            RankView()
+            ncodeView()
                 .tabItem{
-                    Label("閱讀清單", systemImage: "house.circle")
+                    Label("なろう", systemImage: "house.circle")
                 }
-            RankView()
+            BookNewsView()
                 .tabItem{
-                    Label("購買清單", systemImage: "house.circle")
+                    Label("最新資訊", systemImage: "house.circle")
                 }
             RankView()
                 .tabItem{

@@ -21,4 +21,6 @@ struct Book: Identifiable {
     var amLink: String = "N/A"
     var rank: Int = -1
     var description = "N/A"
+    var ncode_link = "N/A"
+    var ncode_data = "N/A"
 }

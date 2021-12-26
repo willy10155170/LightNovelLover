@@ -1,15 +1,15 @@
 //
-//  BookAPI.swift
+//  BookInfoAPI.swift
 //  lightNovelLover
 //
-//  Created by Shiroha on 2021/12/16.
+//  Created by Shiroha on 2021/12/25.
 //
 
 import Foundation
 import Alamofire
 import Kanna
 
-class BookAPI {
+class BookInfoAPI {
     func ParseWeekHTML(html: String, completion: @escaping ([Book]) -> Void) {
         var response: [Book] = []
         if let doc = try? HTML(html: html, encoding: .utf8) {
@@ -77,7 +77,10 @@ class BookAPI {
                     }
                     
                     for des in doc.xpath("//*[@id=\"bookDescription_feature_div\"]/div/div[1]") {
-                        response[i].description = des.text ?? "N/A"
+                        var temp = des.text?.replacingOccurrences(of: "。 ", with: "。\n\n")
+                        temp = temp?.replacingOccurrences(of: "! ", with: "!\n\n")
+                        temp = temp?.replacingOccurrences(of: " ", with: "")
+                        response[i].description = temp ?? "N/A"
                     }
                     
                     
@@ -213,7 +216,10 @@ class BookAPI {
                         response[i].series = series.text ?? "N/A"
                     }
                     for des in doc.xpath("//*[@id=\"js-summary-collapse-main-product\"]/p[2]") {
-                        response[i].description = des.text ?? "N/A"
+                        var temp = des.text?.replacingOccurrences(of: "\n                               ", with: "")
+                        temp = temp?.replacingOccurrences(of: "                            ", with: "")
+                        temp = temp?.replacingOccurrences(of: "\n", with: "\n\n")
+                        response[i].description = temp ?? "N/A"
                     }
                     for img_link in doc.css("#js-top-block > div > div.p-main__body > div.p-main__left > div.p-main__thumb > div.m-thumb > a > img") {
                         response[i].imageLink = img_link["data-original"] ?? response[i].imageLink

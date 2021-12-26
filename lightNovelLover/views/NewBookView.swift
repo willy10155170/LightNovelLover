@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct NewBookView: View {
-    @StateObject var bookModel = BookModel()
+    @EnvironmentObject var networkStatus: NetworkStatus
+    @StateObject var bookInfoModel = BookInfoModel()
     @State private var newBookTime = 0
+    @State private var showAlert = false
     var body: some View {
         NavigationView {
             VStack {
@@ -20,12 +22,14 @@ struct NewBookView: View {
                     Text("選擇時間")
                 }
                 .onChange(of: newBookTime) { tag in
-                    bookModel.NewBookList = []
-                    bookModel.LoadNewBook(timeRange: newBookTime)
+                    bookInfoModel.NewBookList = []
+                    if networkStatus.isConnected {
+                        bookInfoModel.LoadNewBook(timeRange: newBookTime)
+                    }
                 }
                 .pickerStyle(.segmented)
                 List{
-                    ForEach(bookModel.NewBookList){ book in
+                    ForEach(bookInfoModel.NewBookList){ book in
                         NavigationLink {
                             BookDetailView(book: book)
                         } label: {
@@ -34,19 +38,34 @@ struct NewBookView: View {
                     }
                 }
                 .overlay {
-                    if bookModel.NewBookList.isEmpty {
+                    if bookInfoModel.NewBookList.isEmpty && networkStatus.isConnected {
                         ProgressView()
+                    }
+                    else if bookInfoModel.NewBookList.isEmpty && !networkStatus.isConnected {
+                        Text("試著打開你的網路看看？")
                     }
                 }
                 .refreshable {
-                    bookModel.LoadNewBook(timeRange: newBookTime)
+                    bookInfoModel.NewBookList = []
+                    showAlert = bookInfoModel.NewBookList.isEmpty && !networkStatus.isConnected
+
+                    if networkStatus.isConnected {
+                        bookInfoModel.LoadNewBook(timeRange: newBookTime)
+                    }
                 }
             }
             .navigationTitle("本週新書")
         }
         .onAppear {
-            bookModel.LoadNewBook(timeRange: newBookTime)
+            if networkStatus.isConnected {
+                bookInfoModel.LoadNewBook(timeRange: newBookTime)
+            }
+            showAlert = bookInfoModel.NewBookList.isEmpty && !networkStatus.isConnected
         }
+        .alert("沒有網路連線", isPresented: $showAlert, actions: {
+            Button("OK") { }
+        })
+        
     }
 }
 

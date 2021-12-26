@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct RankView: View {
-    @StateObject var bookModel = BookModel()
+    @EnvironmentObject var networkStatus: NetworkStatus
+    @StateObject var bookInfoModel = BookInfoModel()
     @State private var newBookTime = 0
+    @State private var showAlert = false
     var body: some View {
         NavigationView {
             VStack {
@@ -21,12 +23,14 @@ struct RankView: View {
                     Text("選擇時間")
                 }
                 .onChange(of: newBookTime) { tag in
-                    bookModel.RankList = []
-                    bookModel.LoadRank(timeRange: newBookTime)
+                    bookInfoModel.RankList = []
+                    if networkStatus.isConnected {
+                        bookInfoModel.LoadRank(timeRange: newBookTime)
+                    }
                 }
                 .pickerStyle(.segmented)
                 List{
-                    ForEach(bookModel.RankList){ book in
+                    ForEach(bookInfoModel.RankList){ book in
                         VStack {
                             Text("\(book.rank)位")
                                 .font(.system(size: 20))
@@ -41,16 +45,33 @@ struct RankView: View {
                     }
                 }
                 .overlay {
-                    if bookModel.RankList.isEmpty {
+                    if bookInfoModel.RankList.isEmpty && networkStatus.isConnected {
                         ProgressView()
+                    }
+                    else if bookInfoModel.NewBookList.isEmpty && !networkStatus.isConnected {
+                        Text("試著打開你的網路看看？")
+                    }
+                }
+                .refreshable {
+                    bookInfoModel.RankList = []
+                    showAlert = bookInfoModel.RankList.isEmpty && !networkStatus.isConnected
+                    
+                    if networkStatus.isConnected {
+                        bookInfoModel.LoadRank(timeRange: newBookTime)
                     }
                 }
             }
             .navigationTitle("銷售排行榜")
         }
         .onAppear {
-            bookModel.LoadRank(timeRange: newBookTime)
+            if networkStatus.isConnected {
+                bookInfoModel.LoadRank(timeRange: newBookTime)
+            }
+            showAlert = bookInfoModel.RankList.isEmpty && !networkStatus.isConnected
         }
+        .alert("沒有網路連線", isPresented: $showAlert, actions: {
+            Button("OK") { }
+        })
     }
 }
 

@@ -11,7 +11,7 @@ struct BookDetailView: View {
     let book: Book
     var body: some View {
         GeometryReader { geometry in
-            ScrollView(.vertical) {
+            ScrollView(.vertical, showsIndicators: false) {
                 AsyncImage(url: URL(string: book.imageLink)) { image in
                     image
                         .resizable()
@@ -20,17 +20,31 @@ struct BookDetailView: View {
                     Color.gray
                 }
                 .frame(width: geometry.size.width - 20)
-                Text("書名: " + book.name)
-                Text("作者: " + book.author)
-                Text("插畫: " + book.illustrator)
-                Text("出版社: " + book.publisher)
-                Text("出版日: " + book.publishedDate)
-                Text("系列: " + book.series)
-                Text("簡介: " + book.description)
-                
+                Text(book.name)
+                    .font(.system(size: 25))
+                    .fontWeight(.heavy)
+                    .frame(width: geometry.size.width - 20)
+                VStack(alignment: .leading) {
+                    Spacer()
+                    Text("作者:   " + book.author)
+                        .font(.system(size: 20))
+                    Text("插畫:   " + book.illustrator)
+                        .font(.system(size: 20))
+                    Text("出版社:  " + book.publisher)
+                        .font(.system(size: 20))
+                    Text("出版日:  " + book.publishedDate)
+                        .font(.system(size: 20))
+                    Text("系列:   " + book.series)
+                        .font(.system(size: 20))
+                    Spacer()
+                    Text(book.description)
+                    Spacer()
+                }
+                .frame(width: geometry.size.width - 20)
                 Link(destination: URL(string: book.bwLink)!) {
                     Text("前往BOOK☆WALKER購買↗")
                 }
+                Spacer()
                 Link(destination: URL(string: book.amLink)!) {
                     Text("前往Amazon購買↗")
                 }

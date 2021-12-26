@@ -1,0 +1,48 @@
+//
+//  BookNewsDetailView.swift
+//  lightNovelLover
+//
+//  Created by Shiroha on 2021/12/26.
+//
+
+import SwiftUI
+
+struct BookNewsDetailView: View {
+    let news: News
+    @StateObject var newsModel = BookNewsModel()
+    var body: some View {
+        GeometryReader { geometry in
+            ScrollView(.vertical, showsIndicators: false){
+                Text(news.title)
+                    .font(.system(size: 25))
+                    .fontWeight(.heavy)
+                    .frame(width: geometry.size.width - 20)
+                    //.foregroundColor(.blue)
+                Divider()
+                AsyncImage(url: URL(string: news.thumbnail)) { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                } placeholder: {
+                    ProgressView()
+                }
+                .frame(width: geometry.size.width - 20)
+                Link(destination: URL(string: "https://ln-news.com" + news.path)!) {
+                    Text("圖文好讀版↗")
+                }
+                Text(newsModel.NewsDetail)
+                    .font(.system(size: 18))
+                    .frame(width: geometry.size.width - 20)
+            }
+        }
+            .onAppear {
+                newsModel.LoadNewsDetail(html: news.path)
+            }
+    }
+}
+
+struct BookNewsDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        BookNewsDetailView(news: News(categories: [lightNovelLover.categories(color: "green", name: "イベント")], description: "電撃文庫刊『魔法科高校の劣等生』のオンライン展示会が「Anique」にて開催...", is_pr: false, path: "/articles/113011", thumbnail: "https://assets.ln-news.com/images/medias/64178be7fdd94f4b983081c7a24d7bd3.jpg", time: "2021/12/25", title: "『魔法科高校の劣等生』のオンライン展示会が「Anique」にて開催中　オリジナルグッズの販売なども実施"))
+    }
+}

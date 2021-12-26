@@ -17,13 +17,18 @@ struct BookRowView: View {
                     .resizable()
                     .scaledToFill()
             } placeholder: {
-                Color.gray
+                //Color.gray
+                ProgressView()
             }
             .frame(width: 90, height: 160)
             Spacer()
             Spacer()
             VStack(alignment: .leading) {
-                Text("書名: " + book.name)
+                Text(book.name)
+                    .font(.system(size: 18))
+                    .fontWeight(.heavy)
+                    .foregroundColor(.blue)
+                    .lineLimit(2)
                 Text("作者: " + book.author)
                 Text("出版社: " + book.publisher)
                 Text("出版日: " + book.publishedDate)
