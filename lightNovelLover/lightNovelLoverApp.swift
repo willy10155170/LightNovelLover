@@ -10,10 +10,12 @@ import SwiftUI
 @main
 struct lightNovelLoverApp: App {
     @StateObject var networkStatus = NetworkStatus()
+    @StateObject var bookDataModel = BookDataModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(networkStatus)
+                .environmentObject(bookDataModel)
         }
     }
 }

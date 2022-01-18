@@ -32,5 +32,9 @@ class BookInfoModel: ObservableObject {
         }
     }
     
-    
+    func LoadSingleBook(html: String, completion: @escaping (Book) -> Void) {
+        self.bookapi.GetBookFromBW(html: html) { re in
+            completion(re)
+        }
+    }
 }

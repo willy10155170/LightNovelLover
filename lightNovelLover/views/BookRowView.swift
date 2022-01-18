@@ -9,9 +9,9 @@ import SwiftUI
 
 struct BookRowView: View {
     let book: Book
+    @EnvironmentObject var bookDataModel: BookDataModel
     var body: some View {
-        HStack {
-            //Image("test_image")
+        HStack(alignment: .top) {
             AsyncImage(url: URL(string: book.imageLink)) { image in
                 image
                     .resizable()

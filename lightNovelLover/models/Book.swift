@@ -23,4 +23,8 @@ struct Book: Identifiable {
     var description = "N/A"
     var ncode_link = "N/A"
     var ncode_data = "N/A"
+    var isFavorite = -1
+    var bought = -1
+    var reading = -1
+    var progress = ""
 }

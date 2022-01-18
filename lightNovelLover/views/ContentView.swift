@@ -26,7 +26,7 @@ struct ContentView: View {
                 .tabItem{
                     Label("最新資訊", systemImage: "house.circle")
                 }
-            RankView()
+            BookManagedView()
                 .tabItem{
                     Label("書籍管理", systemImage: "house.circle")
                 }

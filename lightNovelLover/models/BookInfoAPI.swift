@@ -246,4 +246,40 @@ class BookInfoAPI {
             completion(re)
         }
     }
+    func GetBookFromBW (html: String, completion: @escaping (Book) -> Void) {
+        var response = Book()
+        AF.request(html, encoding: URLEncoding.default).responseString(encoding: String.Encoding.utf8) { res in
+            let re = res.value ?? "Nope"
+            if let doc = try? HTML(html: re, encoding: .utf8) {
+                for name in doc.xpath("//*[@id=\"js-top-block\"]/div/div[1]/h1") {
+                    response.name = name.text ?? "N/A"
+                }
+                for author in doc.xpath("//*[@id=\"js-top-block\"]/div/div[2]/div[2]/div/div[1]/dl/dd[1]/a") {
+                    response.author = author.text ?? "N/A"
+                }
+                for illustrator in doc.xpath("//*[@id=\"js-top-block\"]/div/div[2]/div[2]/div/div[1]/dl/dd[2]/a") {
+                    response.illustrator = illustrator.text ?? "N/A"
+                }
+                for date in doc.xpath("//*[@id=\"information-section\"]/div[1]/div[1]/dl/dd[7]") {
+                    response.publishedDate = date.text ?? "N/A"
+                }
+                for publisher in doc.xpath("//*[@id=\"information-section\"]/div[1]/div[1]/dl/dd[3]/a") {
+                    response.publisher = publisher.text ?? "N/A"
+                }
+                for series in doc.xpath("//*[@id=\"information-section\"]/div[1]/div[1]/dl/dd[1]/a") {
+                    response.series = series.text ?? "N/A"
+                }
+                for des in doc.xpath("//*[@id=\"js-summary-collapse-main-product\"]/p[2]") {
+                    var temp = des.text?.replacingOccurrences(of: "\n                               ", with: "")
+                    temp = temp?.replacingOccurrences(of: "                            ", with: "")
+                    temp = temp?.replacingOccurrences(of: "\n", with: "\n\n")
+                    response.description = temp ?? "N/A"
+                }
+                for img_link in doc.css("#js-top-block > div > div.p-main__body > div.p-main__left > div.p-main__thumb > div.m-thumb > a > img") {
+                    response.imageLink = img_link["data-original"] ?? response.imageLink
+                }
+            }
+            completion(response)
+        }
+    }
 }

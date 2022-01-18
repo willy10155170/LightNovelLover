@@ -9,9 +9,20 @@ import SwiftUI
 
 struct BookDetailView: View {
     let book: Book
+    @EnvironmentObject var bookDataModel: BookDataModel
+    @State var showSecondPage = false
     var body: some View {
         GeometryReader { geometry in
             ScrollView(.vertical, showsIndicators: false) {
+//                Button("加到我的最愛") {
+//                    bookDataModel.addFavorite(book: book)
+//                }
+                Button("新增至書櫃") {
+                showSecondPage = true
+                }
+                .sheet(isPresented: $showSecondPage) {
+                    addBookView(book: book, showSecondPage: $showSecondPage, inputByhtml: .constant(false))
+                }
                 AsyncImage(url: URL(string: book.imageLink)) { image in
                     image
                         .resizable()

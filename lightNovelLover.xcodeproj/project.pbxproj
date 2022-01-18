@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B40DFE3527945A5000B823C4 /* ManagedRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40DFE3427945A5000B823C4 /* ManagedRowView.swift */; };
+		B40DFE3727946A8D00B823C4 /* ManagedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40DFE3627946A8D00B823C4 /* ManagedDetailView.swift */; };
+		B40DFE3927949D6200B823C4 /* addBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40DFE3827949D6200B823C4 /* addBookView.swift */; };
 		B4272C24276B73570008320B /* lightNovelLoverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4272C23276B73570008320B /* lightNovelLoverApp.swift */; };
 		B4272C26276B73570008320B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4272C25276B73570008320B /* ContentView.swift */; };
 		B4272C28276B73590008320B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4272C27276B73590008320B /* Assets.xcassets */; };
@@ -16,13 +19,44 @@
 		B4272C41276B73590008320B /* lightNovelLoverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4272C40276B73590008320B /* lightNovelLoverUITestsLaunchTests.swift */; };
 		B4272C4E276B74910008320B /* RankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4272C4D276B74910008320B /* RankView.swift */; };
 		B4272C56276B82370008320B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4272C55276B82370008320B /* Book.swift */; };
-		B4272C58276B85A80008320B /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4272C57276B85A80008320B /* BookModel.swift */; };
 		B4272C5B276B869D0008320B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B4272C5A276B869D0008320B /* Alamofire */; };
 		B4272C5E276B86C60008320B /* Kanna in Frameworks */ = {isa = PBXBuildFile; productRef = B4272C5D276B86C60008320B /* Kanna */; };
 		B4272C60276B877A0008320B /* NewBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4272C5F276B877A0008320B /* NewBookView.swift */; };
-		B4272C62276B8DA50008320B /* BookAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4272C61276B8DA50008320B /* BookAPI.swift */; };
 		B4272C64276BCF540008320B /* BookRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4272C63276BCF540008320B /* BookRowView.swift */; };
+		B4476F44278ECA8000D5124B /* searchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4476F43278ECA8000D5124B /* searchModel.swift */; };
+		B4612F77278785A300094490 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4612F76278785A300094490 /* FavoriteView.swift */; };
+		B46D35872787732B0026745B /* ncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D35822787732A0026745B /* ncode.swift */; };
+		B46D35882787732B0026745B /* BookInfoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D35832787732B0026745B /* BookInfoAPI.swift */; };
+		B46D35892787732B0026745B /* ncodeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D35842787732B0026745B /* ncodeAPI.swift */; };
+		B46D358A2787732B0026745B /* BookNewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D35852787732B0026745B /* BookNewsAPI.swift */; };
+		B46D358B2787732B0026745B /* BookNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D35862787732B0026745B /* BookNews.swift */; };
+		B46D358F278773380026745B /* ncodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D358C278773380026745B /* ncodeModel.swift */; };
+		B46D3590278773380026745B /* BookInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D358D278773380026745B /* BookInfoModel.swift */; };
+		B46D3591278773380026745B /* BookNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D358E278773380026745B /* BookNewsModel.swift */; };
+		B46D35962787735A0026745B /* ncodeReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D35922787735A0026745B /* ncodeReadingView.swift */; };
+		B46D35972787735A0026745B /* ncodeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D35932787735A0026745B /* ncodeRowView.swift */; };
+		B46D35982787735A0026745B /* ncodeIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D35942787735A0026745B /* ncodeIndexView.swift */; };
+		B46D35992787735A0026745B /* ncodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D35952787735A0026745B /* ncodeView.swift */; };
+		B46D359C2787736E0026745B /* BookNewsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D359A2787736E0026745B /* BookNewsRowView.swift */; };
+		B46D359D2787736E0026745B /* BookNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D359B2787736E0026745B /* BookNewsView.swift */; };
+		B46D359F278773BF0026745B /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D359E278773BF0026745B /* NetworkStatus.swift */; };
+		B46D35A1278773DF0026745B /* BookNewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D35A0278773DF0026745B /* BookNewsDetailView.swift */; };
+		B46D35A32787747C0026745B /* BookManagedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D35A22787747C0026745B /* BookManagedView.swift */; };
+		B46D35A5278774820026745B /* BookDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D35A4278774820026745B /* BookDataModel.swift */; };
+		B46D35A8278774B90026745B /* BookData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B46D35A6278774B90026745B /* BookData.xcdatamodeld */; };
 		B49E3949276D0B400049EB49 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49E3948276D0B400049EB49 /* BookDetailView.swift */; };
+		B4FCBFD02796BF9700A7C509 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4FCBFCF2796BF9700A7C509 /* WidgetKit.framework */; };
+		B4FCBFD22796BF9700A7C509 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4FCBFD12796BF9700A7C509 /* SwiftUI.framework */; };
+		B4FCBFD52796BF9700A7C509 /* LNLWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FCBFD42796BF9700A7C509 /* LNLWidget.swift */; };
+		B4FCBFD82796BF9900A7C509 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4FCBFD72796BF9900A7C509 /* Assets.xcassets */; };
+		B4FCBFDA2796BF9900A7C509 /* LNLWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B4FCBFD62796BF9700A7C509 /* LNLWidget.intentdefinition */; };
+		B4FCBFDB2796BF9900A7C509 /* LNLWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B4FCBFD62796BF9700A7C509 /* LNLWidget.intentdefinition */; };
+		B4FCBFDE2796BF9900A7C509 /* LNLWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B4FCBFCD2796BF9700A7C509 /* LNLWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B4FCBFE52796C8D500A7C509 /* BookData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B46D35A6278774B90026745B /* BookData.xcdatamodeld */; };
+		B4FCBFE62796C8E900A7C509 /* BookDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D35A4278774820026745B /* BookDataModel.swift */; };
+		B4FCBFE72796C8F700A7C509 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4272C55276B82370008320B /* Book.swift */; };
+		B4FCBFEB2796DA2000A7C509 /* IllustrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FCBFEA2796DA2000A7C509 /* IllustrationView.swift */; };
+		B4FCBFED2796EDD800A7C509 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FCBFEC2796EDD800A7C509 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,9 +74,33 @@
 			remoteGlobalIDString = B4272C1F276B73570008320B;
 			remoteInfo = lightNovelLover;
 		};
+		B4FCBFDC2796BF9900A7C509 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4272C18276B73570008320B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4FCBFCC2796BF9700A7C509;
+			remoteInfo = LNLWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B4FCBFDF2796BF9900A7C509 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B4FCBFDE2796BF9900A7C509 /* LNLWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B40DFE3427945A5000B823C4 /* ManagedRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedRowView.swift; sourceTree = "<group>"; };
+		B40DFE3627946A8D00B823C4 /* ManagedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedDetailView.swift; sourceTree = "<group>"; };
+		B40DFE3827949D6200B823C4 /* addBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addBookView.swift; sourceTree = "<group>"; };
 		B4272C20276B73570008320B /* lightNovelLover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lightNovelLover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4272C23276B73570008320B /* lightNovelLoverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lightNovelLoverApp.swift; sourceTree = "<group>"; };
 		B4272C25276B73570008320B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,11 +113,41 @@
 		B4272C40276B73590008320B /* lightNovelLoverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lightNovelLoverUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B4272C4D276B74910008320B /* RankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankView.swift; sourceTree = "<group>"; };
 		B4272C55276B82370008320B /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		B4272C57276B85A80008320B /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		B4272C5F276B877A0008320B /* NewBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookView.swift; sourceTree = "<group>"; };
-		B4272C61276B8DA50008320B /* BookAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAPI.swift; sourceTree = "<group>"; };
 		B4272C63276BCF540008320B /* BookRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRowView.swift; sourceTree = "<group>"; };
+		B4476F43278ECA8000D5124B /* searchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchModel.swift; sourceTree = "<group>"; };
+		B4612F76278785A300094490 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		B46D35822787732A0026745B /* ncode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ncode.swift; sourceTree = "<group>"; };
+		B46D35832787732B0026745B /* BookInfoAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookInfoAPI.swift; sourceTree = "<group>"; };
+		B46D35842787732B0026745B /* ncodeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ncodeAPI.swift; sourceTree = "<group>"; };
+		B46D35852787732B0026745B /* BookNewsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookNewsAPI.swift; sourceTree = "<group>"; };
+		B46D35862787732B0026745B /* BookNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookNews.swift; sourceTree = "<group>"; };
+		B46D358C278773380026745B /* ncodeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ncodeModel.swift; sourceTree = "<group>"; };
+		B46D358D278773380026745B /* BookInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookInfoModel.swift; sourceTree = "<group>"; };
+		B46D358E278773380026745B /* BookNewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookNewsModel.swift; sourceTree = "<group>"; };
+		B46D35922787735A0026745B /* ncodeReadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ncodeReadingView.swift; sourceTree = "<group>"; };
+		B46D35932787735A0026745B /* ncodeRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ncodeRowView.swift; sourceTree = "<group>"; };
+		B46D35942787735A0026745B /* ncodeIndexView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ncodeIndexView.swift; sourceTree = "<group>"; };
+		B46D35952787735A0026745B /* ncodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ncodeView.swift; sourceTree = "<group>"; };
+		B46D359A2787736E0026745B /* BookNewsRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookNewsRowView.swift; sourceTree = "<group>"; };
+		B46D359B2787736E0026745B /* BookNewsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookNewsView.swift; sourceTree = "<group>"; };
+		B46D359E278773BF0026745B /* NetworkStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
+		B46D35A0278773DF0026745B /* BookNewsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookNewsDetailView.swift; sourceTree = "<group>"; };
+		B46D35A22787747C0026745B /* BookManagedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookManagedView.swift; sourceTree = "<group>"; };
+		B46D35A4278774820026745B /* BookDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDataModel.swift; sourceTree = "<group>"; };
+		B46D35A7278774B90026745B /* BookData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BookData.xcdatamodel; sourceTree = "<group>"; };
 		B49E3948276D0B400049EB49 /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
+		B4A40D7B27877849000793F5 /* BookDataNew.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BookDataNew.xcdatamodel; sourceTree = "<group>"; };
+		B4FCBFCD2796BF9700A7C509 /* LNLWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LNLWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4FCBFCF2796BF9700A7C509 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		B4FCBFD12796BF9700A7C509 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		B4FCBFD42796BF9700A7C509 /* LNLWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNLWidget.swift; sourceTree = "<group>"; };
+		B4FCBFD62796BF9700A7C509 /* LNLWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = LNLWidget.intentdefinition; sourceTree = "<group>"; };
+		B4FCBFD72796BF9900A7C509 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B4FCBFD92796BF9900A7C509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4FCBFE32796C41D00A7C509 /* lightNovelLover.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lightNovelLover.entitlements; sourceTree = "<group>"; };
+		B4FCBFEA2796DA2000A7C509 /* IllustrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustrationView.swift; sourceTree = "<group>"; };
+		B4FCBFEC2796EDD800A7C509 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +174,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B4FCBFCA2796BF9700A7C509 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4FCBFD22796BF9700A7C509 /* SwiftUI.framework in Frameworks */,
+				B4FCBFD02796BF9700A7C509 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -95,6 +192,8 @@
 				B4272C22276B73570008320B /* lightNovelLover */,
 				B4272C33276B73590008320B /* lightNovelLoverTests */,
 				B4272C3D276B73590008320B /* lightNovelLoverUITests */,
+				B4FCBFD32796BF9700A7C509 /* LNLWidget */,
+				B4FCBFCE2796BF9700A7C509 /* Frameworks */,
 				B4272C21276B73570008320B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,6 +204,7 @@
 				B4272C20276B73570008320B /* lightNovelLover.app */,
 				B4272C30276B73590008320B /* lightNovelLoverTests.xctest */,
 				B4272C3A276B73590008320B /* lightNovelLoverUITests.xctest */,
+				B4FCBFCD2796BF9700A7C509 /* LNLWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,10 +212,13 @@
 		B4272C22276B73570008320B /* lightNovelLover */ = {
 			isa = PBXGroup;
 			children = (
+				B4FCBFE32796C41D00A7C509 /* lightNovelLover.entitlements */,
 				B4272C54276B7F830008320B /* models */,
 				B4272C53276B7F750008320B /* view models */,
 				B4272C52276B773B0008320B /* views */,
 				B4272C23276B73570008320B /* lightNovelLoverApp.swift */,
+				B4FCBFEC2796EDD800A7C509 /* ImagePicker.swift */,
+				B46D359E278773BF0026745B /* NetworkStatus.swift */,
 				B4272C27276B73590008320B /* Assets.xcassets */,
 				B4272C29276B73590008320B /* Preview Content */,
 			);
@@ -152,9 +255,22 @@
 			children = (
 				B4272C25276B73570008320B /* ContentView.swift */,
 				B4272C5F276B877A0008320B /* NewBookView.swift */,
+				B46D359A2787736E0026745B /* BookNewsRowView.swift */,
+				B46D359B2787736E0026745B /* BookNewsView.swift */,
+				B46D35A0278773DF0026745B /* BookNewsDetailView.swift */,
 				B4272C4D276B74910008320B /* RankView.swift */,
 				B49E3948276D0B400049EB49 /* BookDetailView.swift */,
 				B4272C63276BCF540008320B /* BookRowView.swift */,
+				B46D35942787735A0026745B /* ncodeIndexView.swift */,
+				B46D35A22787747C0026745B /* BookManagedView.swift */,
+				B46D35922787735A0026745B /* ncodeReadingView.swift */,
+				B46D35932787735A0026745B /* ncodeRowView.swift */,
+				B46D35952787735A0026745B /* ncodeView.swift */,
+				B4612F76278785A300094490 /* FavoriteView.swift */,
+				B40DFE3427945A5000B823C4 /* ManagedRowView.swift */,
+				B40DFE3627946A8D00B823C4 /* ManagedDetailView.swift */,
+				B40DFE3827949D6200B823C4 /* addBookView.swift */,
+				B4FCBFEA2796DA2000A7C509 /* IllustrationView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -162,7 +278,11 @@
 		B4272C53276B7F750008320B /* view models */ = {
 			isa = PBXGroup;
 			children = (
-				B4272C57276B85A80008320B /* BookModel.swift */,
+				B46D358D278773380026745B /* BookInfoModel.swift */,
+				B46D358E278773380026745B /* BookNewsModel.swift */,
+				B46D35A4278774820026745B /* BookDataModel.swift */,
+				B46D358C278773380026745B /* ncodeModel.swift */,
+				B4476F43278ECA8000D5124B /* searchModel.swift */,
 			);
 			path = "view models";
 			sourceTree = "<group>";
@@ -171,9 +291,34 @@
 			isa = PBXGroup;
 			children = (
 				B4272C55276B82370008320B /* Book.swift */,
-				B4272C61276B8DA50008320B /* BookAPI.swift */,
+				B46D35832787732B0026745B /* BookInfoAPI.swift */,
+				B46D35862787732B0026745B /* BookNews.swift */,
+				B46D35852787732B0026745B /* BookNewsAPI.swift */,
+				B46D35822787732A0026745B /* ncode.swift */,
+				B46D35842787732B0026745B /* ncodeAPI.swift */,
+				B46D35A6278774B90026745B /* BookData.xcdatamodeld */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		B4FCBFCE2796BF9700A7C509 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4FCBFCF2796BF9700A7C509 /* WidgetKit.framework */,
+				B4FCBFD12796BF9700A7C509 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4FCBFD32796BF9700A7C509 /* LNLWidget */ = {
+			isa = PBXGroup;
+			children = (
+				B4FCBFD42796BF9700A7C509 /* LNLWidget.swift */,
+				B4FCBFD62796BF9700A7C509 /* LNLWidget.intentdefinition */,
+				B4FCBFD72796BF9900A7C509 /* Assets.xcassets */,
+				B4FCBFD92796BF9900A7C509 /* Info.plist */,
+			);
+			path = LNLWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,10 +331,12 @@
 				B4272C1C276B73570008320B /* Sources */,
 				B4272C1D276B73570008320B /* Frameworks */,
 				B4272C1E276B73570008320B /* Resources */,
+				B4FCBFDF2796BF9900A7C509 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B4FCBFDD2796BF9900A7C509 /* PBXTargetDependency */,
 			);
 			name = lightNovelLover;
 			packageProductDependencies = (
@@ -236,6 +383,23 @@
 			productReference = B4272C3A276B73590008320B /* lightNovelLoverUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		B4FCBFCC2796BF9700A7C509 /* LNLWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4FCBFE22796BF9900A7C509 /* Build configuration list for PBXNativeTarget "LNLWidgetExtension" */;
+			buildPhases = (
+				B4FCBFC92796BF9700A7C509 /* Sources */,
+				B4FCBFCA2796BF9700A7C509 /* Frameworks */,
+				B4FCBFCB2796BF9700A7C509 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LNLWidgetExtension;
+			productName = LNLWidgetExtension;
+			productReference = B4FCBFCD2796BF9700A7C509 /* LNLWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -256,6 +420,9 @@
 					B4272C39276B73590008320B = {
 						CreatedOnToolsVersion = 13.1;
 						TestTargetID = B4272C1F276B73570008320B;
+					};
+					B4FCBFCC2796BF9700A7C509 = {
+						CreatedOnToolsVersion = 13.1;
 					};
 				};
 			};
@@ -279,6 +446,7 @@
 				B4272C1F276B73570008320B /* lightNovelLover */,
 				B4272C2F276B73590008320B /* lightNovelLoverTests */,
 				B4272C39276B73590008320B /* lightNovelLoverUITests */,
+				B4FCBFCC2796BF9700A7C509 /* LNLWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -307,6 +475,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B4FCBFCB2796BF9700A7C509 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4FCBFD82796BF9900A7C509 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -314,15 +490,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4272C58276B85A80008320B /* BookModel.swift in Sources */,
-				B4272C62276B8DA50008320B /* BookAPI.swift in Sources */,
+				B46D3590278773380026745B /* BookInfoModel.swift in Sources */,
 				B4272C64276BCF540008320B /* BookRowView.swift in Sources */,
+				B46D35882787732B0026745B /* BookInfoAPI.swift in Sources */,
+				B4FCBFED2796EDD800A7C509 /* ImagePicker.swift in Sources */,
+				B46D35892787732B0026745B /* ncodeAPI.swift in Sources */,
+				B46D359F278773BF0026745B /* NetworkStatus.swift in Sources */,
 				B4272C26276B73570008320B /* ContentView.swift in Sources */,
+				B46D35972787735A0026745B /* ncodeRowView.swift in Sources */,
 				B49E3949276D0B400049EB49 /* BookDetailView.swift in Sources */,
+				B46D35A1278773DF0026745B /* BookNewsDetailView.swift in Sources */,
+				B46D35992787735A0026745B /* ncodeView.swift in Sources */,
+				B40DFE3927949D6200B823C4 /* addBookView.swift in Sources */,
+				B40DFE3527945A5000B823C4 /* ManagedRowView.swift in Sources */,
+				B46D358A2787732B0026745B /* BookNewsAPI.swift in Sources */,
+				B4FCBFDB2796BF9900A7C509 /* LNLWidget.intentdefinition in Sources */,
+				B46D35A32787747C0026745B /* BookManagedView.swift in Sources */,
+				B46D3591278773380026745B /* BookNewsModel.swift in Sources */,
+				B46D35982787735A0026745B /* ncodeIndexView.swift in Sources */,
+				B46D359C2787736E0026745B /* BookNewsRowView.swift in Sources */,
 				B4272C60276B877A0008320B /* NewBookView.swift in Sources */,
+				B40DFE3727946A8D00B823C4 /* ManagedDetailView.swift in Sources */,
+				B4612F77278785A300094490 /* FavoriteView.swift in Sources */,
+				B46D35A8278774B90026745B /* BookData.xcdatamodeld in Sources */,
 				B4272C4E276B74910008320B /* RankView.swift in Sources */,
 				B4272C24276B73570008320B /* lightNovelLoverApp.swift in Sources */,
+				B4FCBFEB2796DA2000A7C509 /* IllustrationView.swift in Sources */,
+				B46D359D2787736E0026745B /* BookNewsView.swift in Sources */,
+				B46D35A5278774820026745B /* BookDataModel.swift in Sources */,
+				B46D358F278773380026745B /* ncodeModel.swift in Sources */,
+				B46D358B2787732B0026745B /* BookNews.swift in Sources */,
 				B4272C56276B82370008320B /* Book.swift in Sources */,
+				B46D35872787732B0026745B /* ncode.swift in Sources */,
+				B46D35962787735A0026745B /* ncodeReadingView.swift in Sources */,
+				B4476F44278ECA8000D5124B /* searchModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +544,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B4FCBFC92796BF9700A7C509 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4FCBFE62796C8E900A7C509 /* BookDataModel.swift in Sources */,
+				B4FCBFD52796BF9700A7C509 /* LNLWidget.swift in Sources */,
+				B4FCBFE52796C8D500A7C509 /* BookData.xcdatamodeld in Sources */,
+				B4FCBFE72796C8F700A7C509 /* Book.swift in Sources */,
+				B4FCBFDA2796BF9900A7C509 /* LNLWidget.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -355,6 +568,11 @@
 			isa = PBXTargetDependency;
 			target = B4272C1F276B73570008320B /* lightNovelLover */;
 			targetProxy = B4272C3B276B73590008320B /* PBXContainerItemProxy */;
+		};
+		B4FCBFDD2796BF9900A7C509 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4FCBFCC2796BF9700A7C509 /* LNLWidgetExtension */;
+			targetProxy = B4FCBFDC2796BF9900A7C509 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -478,13 +696,17 @@
 		B4272C45276B73590008320B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = lightNovelLover/lightNovelLover.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"lightNovelLover/Preview Content\"";
+				DEVELOPMENT_TEAM = D3869C23R4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow to Save !!!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -506,13 +728,17 @@
 		B4272C46276B73590008320B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = lightNovelLover/lightNovelLover.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"lightNovelLover/Preview Content\"";
+				DEVELOPMENT_TEAM = D3869C23R4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow to Save !!!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -623,6 +849,60 @@
 			};
 			name = Release;
 		};
+		B4FCBFE02796BF9900A7C509 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D3869C23R4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LNLWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LNLWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = shiroha.lightNovelLover.LNLWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B4FCBFE12796BF9900A7C509 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D3869C23R4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LNLWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LNLWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = shiroha.lightNovelLover.LNLWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -662,6 +942,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		B4FCBFE22796BF9900A7C509 /* Build configuration list for PBXNativeTarget "LNLWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4FCBFE02796BF9900A7C509 /* Debug */,
+				B4FCBFE12796BF9900A7C509 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -695,6 +984,20 @@
 			productName = Kanna;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		B46D35A6278774B90026745B /* BookData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B4A40D7B27877849000793F5 /* BookDataNew.xcdatamodel */,
+				B46D35A7278774B90026745B /* BookData.xcdatamodel */,
+			);
+			currentVersion = B4A40D7B27877849000793F5 /* BookDataNew.xcdatamodel */;
+			path = BookData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B4272C18276B73570008320B /* Project object */;
 }
