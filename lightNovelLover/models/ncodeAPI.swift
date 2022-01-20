@@ -11,7 +11,7 @@ import Alamofire
 
 class ncodeAPI {
     func GetncodeList (completion: @escaping (String) -> Void) {
-        var url = "https://yomou.syosetu.com/rank/list/type/weekly_total/"
+        var url = "https://yomou.syosetu.com/rank/list/type/total_total/"
         AF.request(url, encoding: URLEncoding.default).responseString(encoding: String.Encoding.utf8) { response in
             let re = response.value ?? "Nope"
             completion(re)

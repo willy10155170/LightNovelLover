@@ -44,36 +44,22 @@ struct SimpleEntry: TimelineEntry {
 
 struct LNLWidgetEntryView : View {
     var entry: Provider.Entry
-    //@EnvironmentObject var bookDataModel: BookDataModel
+    @Environment(\.widgetFamily) var family
     var body: some View {
-        VStack {
-            Text("今天看過書了嗎？")
+        HStack {
+            Image("widget_image")
+                .resizable()
+                .frame(width: 81, height: 144)
+                .scaledToFill()
+            VStack {
+                Text("カノジョに浮気されていた俺が、小悪魔な後輩に懐かれています５")
+                    .font(.system(size: 10))
+                Text("御宮　ゆう ")
+                    .font(.system(size: 10))
+                Text("えーる")
+                    .font(.system(size: 10))
+            }
         }
-//        .onAppear {
-//            let container = NSPersistentContainer(name:"BookData")
-//            var saveBooks: [LocalBook] = []
-//            container.loadPersistentStores { description, error in
-//                if let error = error {
-//                    print("error \(error)")
-//                }
-//            }
-//            let sort = NSSortDescriptor(key: #keyPath(LocalBook.userOrder), ascending: true)
-//            let fetchRequest = NSFetchRequest<LocalBook> (entityName: "LocalBook")
-//            fetchRequest.sortDescriptors = [sort]
-//            do {
-//                saveBooks = try container.viewContext.fetch(fetchRequest)
-//            } catch let error {
-//                print("error \(error)")
-//            }
-//            var temp: [LocalBook] = []
-//            for i in saveBooks {
-//                if i.favoriteRank != -1 {
-//                    temp.append(i)
-//                }
-//            }
-//            saveBooks = temp
-//            print(saveBooks[0].name!)
-//        }
     }
 }
 
@@ -84,8 +70,10 @@ struct LNLWidget: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             LNLWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("LightNovelLover")
+        .description("LNL Widget")
+        .supportedFamilies([.systemMedium])
+        
     }
 }
 

@@ -15,6 +15,7 @@ struct ncodeReadingView: View {
             ScrollView(.vertical, showsIndicators: false){
                 VStack(alignment: .center){
                     Text(ncModel.ncodeIndexData)
+                        .lineLimit(200)
                 }
             }
         }
